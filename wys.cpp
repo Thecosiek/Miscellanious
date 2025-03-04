@@ -1,3 +1,8 @@
+// Implementation of wariation of Stanislaw Ulam's game where one person picks number from 1-N
+// and other tries to guess it
+// The wariation includes: 1) Guessing person can only ask 'is smaller than' questions
+// 2) Person who picks number can lie k times
+
 #include <iostream>
 #include <vector>
 #include <utility>
@@ -12,11 +17,11 @@ int DUZA_WARTOSC = 100;
 
 int liczby, klamstwa, gry; // n, k, g
 
-map<std::vector<int>, int > ruchyGry; // mapa moøliwych stanÛw gry
+map<std::vector<int>, int > ruchyGry; // mapa mo≈ºliwych stan√≥w gry
 
 
 int preprocessing_stanow(std::vector<int> stan, int n) {
-	if (ruchyGry.count(stan)) { // jeúli dany stan juø wystπpi≥ to znamy jego wartoúÊ
+	if (ruchyGry.count(stan)) { // je≈õli dany stan ju≈º wystƒÖpi≈Ç to znamy jego warto≈õƒá
 		return ruchyGry[stan];
 	}
 	//warunek ktory konczy rekurencje, gdy zostaje jedna mozliwa wartosc
