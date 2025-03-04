@@ -1,3 +1,13 @@
+// Implementacja funkcji prev in range która wyznacza największy indeks j taki, że 0≤j≤i
+// oraz xj∈[lo,hi]. Jeśli taki indeks nie istnieje, wynikiem funkcji powinno być -1
+//void init(const vector<int> &x) – inicjalizacja początkowego ciągu X przez wartości wektora x 
+//(uwaga: ciąg może zawierać dowolne wartości mieszczące się w typie int)
+//int prevInRange(int i, int lo, int hi) – oblicz wartość prevInRange(i, [lo, hi]). Możesz założyć, że 0≤i<|X|
+// i INT_MIN≤lo≤hi≤INT_MAX
+// void pushBack(int v) - dodanie na końcu obecnego ciągu X elementu o wartości v
+// void done() – zwolnienie całej pamięci używanej do obsługiwania ciągu X.
+
+
 #include <iostream>
 #include <climits>
 #include <vector>
@@ -72,7 +82,7 @@ void pushBack(int v) { //funkcja tak naprawde odpowiada za tworzenie/aktualizowa
 }
 
 int wyszukiwanie(std::shared_ptr<wierzcholek> wezel, int minPrzedzialu, int maxPrzedzialu, long long minAktualne, long long maxAktualne) {
-	if (isNull(wezel) or (minAktualne > maxPrzedzialu) or (maxAktualne < minPrzedzialu)) { // jesli wartosci wyjd� za zakres albo nie istniej� to -1
+	if (isNull(wezel) or (minAktualne > maxPrzedzialu) or (maxAktualne < minPrzedzialu)) { // jesli wartosci wyjdš za zakres albo nie istniejš to -1
 		return -1;
 	}
 	if (minAktualne == maxAktualne) { // jesli nasze aktualne min i maks sie zgadzaja, to zwracamy index
