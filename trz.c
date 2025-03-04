@@ -1,7 +1,8 @@
+// Guy travells through country, with motels on the way. Every motel has type for example 'A' and distance from beggining of journey. 
+// Find three motel's (all of difrent type) that are the closest and the furthest
+
 #include <stdio.h>
-
 #include <limits.h>
-
 #include <stdlib.h>
 
 const int MAXIMUM = INT_MAX;
@@ -35,7 +36,7 @@ int czy_trzy_sieci(int * siec, int n) { //sprawdzanie czy wystepuja przynajmniej
 }
 
 int sprawdz_dlugi_przedzial(int * siec, int * odl, int poczatek, int koniec, int maxp) { //sprawdza max przedzialow
-  if (siec[poczatek] == siec[koniec]) { // dla danych A, C  i wszystkich moøliwych B													
+  if (siec[poczatek] == siec[koniec]) { // dla danych A, C  i wszystkich mo≈ºliwych B													
     return maxp;
   }
   int potencjalny_maks = 0;
@@ -89,7 +90,7 @@ int sprawdz_krotki_przedzial(int * odl, int A, int B, int C, int krotki) { //spr
 
 int krotki_przedzial(int * siec, int * odl, int * ostatni, int * nastepny, int n) {
   int krotki = MAXIMUM;
-  for (int x = 1; x < n - 1; x++) { //przechodzimy po wszystkich najbliøszych polozeniem sieciach
+  for (int x = 1; x < n - 1; x++) { //przechodzimy po wszystkich najbli≈ºszych polozeniem sieciach
     int A = ostatni[x]; //
     int C = nastepny[x];
     if (A != -1 && C != n && siec[A] != siec[C]) { //jesli mozemy to kazdy sprawdzamy
@@ -138,7 +139,7 @@ int main() {
 
   int k = 0; //zmienna ktora sprawdza czy nie wypisane zostaly dwa 0
 
-  if (czy_trzy_sieci(siec, n) == 0) { //sprawdzamy czy sπ przynajmniej 3 sieci moteli
+  if (czy_trzy_sieci(siec, n) == 0) { //sprawdzamy czy s≈° przynajmniej 3 sieci moteli
     k = 1;
   }
 
