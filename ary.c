@@ -1,9 +1,10 @@
+// This code paired with ary.h can effectively do atythmetic operation between segments(a, b, q) where a is start of segment, b is
+// end of segment and q is bool which determines if segment is [a;b] or [[-inf;a]u[b;inf]]. In code there are some mathematical simplifications
+// like: 1/inf = 0 etc.
+
 #include "ary.h"
-
 #include <stdio.h>
-
 #include <math.h>
-
 #include <stdbool.h>
 
 
